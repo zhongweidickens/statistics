@@ -1,0 +1,45 @@
+html,body,#app{
+  background-color: #F0F2F5;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-family:"微软雅黑";
+  overflow: auto;
+  min-width: 1200px;
+  min-height: 800px;
+  padding: 0;
+  margin: 0;
+}
+.headline{
+  display: flex;
+  position: relative;
+  color: #000;
+  font-size: 16px;
+  >div{
+    padding-left: 8px;
+    line-height: 20px;
+  }
+}
+.headline::before{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 20px;
+  background: #59d48a;
+}
+.search{
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px dotted #dcdfe6;
+  .row{
+    display: flex;
+    justify-content: space-between;
+    .el-select{
+      width: 100%;
+    }
+    .operation{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
