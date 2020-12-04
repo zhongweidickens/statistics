@@ -25,7 +25,7 @@ export default {
   display: flex;
   .router-view{
     margin-left: 10px ;
-    width: calc(100% - 210px);
+    width: calc(100% - 290px);
     background: #ffffff;
     padding: 20px;
   }

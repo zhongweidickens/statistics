@@ -4,8 +4,10 @@ import router from './router/index'
 import store from './store/index'
 import Element from 'element-ui'
 import echarts from 'echarts'
+import axios from 'axios'
 Vue.use(Element)
 Vue.prototype.$echarts = echarts
+Vue.prototype.$axios = axios
 import 'element-ui/lib/theme-chalk/index.css'
 
 import '@/style/index.less'

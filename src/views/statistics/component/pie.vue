@@ -4,12 +4,12 @@
 
 <script>
 export default {
-  props: ['title'],
+  props: ['params'],
   data () {
     return {
       option: {
         title: {
-          text: this.title,
+          text: this.params.title,
           left: 'center'
         },
         tooltip: {
@@ -20,7 +20,7 @@ export default {
           orient: 'vertical',
           top: '35%',
           left: 10,
-          data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+          data: []
         },
         series: [
           {
@@ -55,6 +55,8 @@ export default {
     }
   },
   created () {
+    this.option.legend.data = this.params.names
+    this.option.series[0].data = this.params.datas
     this.$nextTick(() => {
       const myChart = this.$echarts.init(this.$refs.pie)
       myChart.setOption(this.option);
